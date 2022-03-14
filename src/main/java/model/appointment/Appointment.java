@@ -1,8 +1,9 @@
-package model;
+package model.appointment;
 
 import entity.AppointmentType;
 import java.util.ArrayList;
 import java.util.Collection;
+import model.patient.PatientId;
 
 public class Appointment {
   private final AppointmentId appointmentId;

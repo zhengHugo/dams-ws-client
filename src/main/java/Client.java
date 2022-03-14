@@ -1,6 +1,6 @@
 import entity.AppointmentType;
-import model.AdminClient;
-import model.PatientClient;
+import model.admin.AdminClient;
+import model.patient.PatientClient;
 import java.util.Scanner;
 
 public class Client {

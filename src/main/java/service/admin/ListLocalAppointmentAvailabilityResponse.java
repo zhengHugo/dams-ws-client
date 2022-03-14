@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for listLocalAppointmentAvailabilityResponse complex type.
- *
+ * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- *
+ * 
  * <pre>
  * &lt;complexType name="listLocalAppointmentAvailabilityResponse">
  *   &lt;complexContent>
@@ -23,6 +23,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "listLocalAppointmentAvailabilityResponse", propOrder = {
@@ -30,27 +32,31 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class ListLocalAppointmentAvailabilityResponse {
 
-  @XmlElement(name = "return")
-  protected String _return;
+    @XmlElement(name = "return")
+    protected String _return;
 
-  /**
-   * Gets the value of the return property.
-   *
-   * @return possible object is
-   * {@link String }
-   */
-  public String getReturn() {
-    return _return;
-  }
+    /**
+     * Gets the value of the return property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getReturn() {
+        return _return;
+    }
 
-  /**
-   * Sets the value of the return property.
-   *
-   * @param value allowed object is
-   *              {@link String }
-   */
-  public void setReturn(String value) {
-    this._return = value;
-  }
+    /**
+     * Sets the value of the return property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setReturn(String value) {
+        this._return = value;
+    }
 
 }

@@ -1,25 +1,30 @@
-package model;
+package model.patient;
 
-public class AdminId implements ClientId {
+
+import model.City;
+import model.ClientId;
+
+public class PatientId implements ClientId {
   private final City city;
-  private final int code;
+  private final int number;
 
-  public AdminId(City city, int code) {
+  public PatientId(City city, int number) {
     this.city = city;
-    this.code = code;
+    this.number = number;
   }
 
-  public AdminId(String idString) {
+  public PatientId(String idString) {
     this.city = City.fromCode(idString.substring(0, 3));
-    this.code = Integer.parseInt(idString.substring(4));
+    this.number = Integer.parseInt(idString.substring(4));
   }
 
   public String getId() {
-    return city.code + "A" + code;
+    return city.code + "P" + number;
   }
 
+  @Override
   public City getCity() {
-    return city;
+    return this.city;
   }
 
   @Override
@@ -36,9 +41,9 @@ public class AdminId implements ClientId {
       return false;
     }
 
-    AdminId adminId = (AdminId) o;
+    PatientId patientId = (PatientId) o;
 
-    return this.getId().equals(adminId.getId());
+    return this.getId().equals(patientId.getId());
   }
 
   @Override

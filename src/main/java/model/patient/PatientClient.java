@@ -1,4 +1,4 @@
-package model;
+package model.patient;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -8,6 +8,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 import logger.LoggerUtil;
+import model.appointment.Appointment;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import service.patient.Patient;
@@ -79,13 +80,13 @@ public class PatientClient {
     try {
       switch (this.id.getCity()) {
         case Montreal:
-          url = new URL("http://localhost:8080/patientservicemtl?wsdl");
+          url = new URL("http://localhost:8080/patientservice?wsdl");
           break;
         case Quebec:
-          url = new URL("http://localhost:8081/patientserviceque?wsdl");
+          url = new URL("http://localhost:8081/patientservice?wsdl");
           break;
         case Sherbrooke:
-          url = new URL("http://localhost:8082/patientserviceshe?wsdl");
+          url = new URL("http://localhost:8082/patientservice?wsdl");
           break;
       }
       PatientImplService patientImplService = new PatientImplService(url);

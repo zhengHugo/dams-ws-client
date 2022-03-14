@@ -1,4 +1,4 @@
-package model;
+package model.appointment;
 
 public class AppointmentAvailability {
   private final String appointmentId;

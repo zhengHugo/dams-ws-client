@@ -1,4 +1,4 @@
-package model;
+package model.appointment;
 
 public enum AppointmentTime {
   Morning("M"),

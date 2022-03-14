@@ -1,4 +1,4 @@
-package model;
+package model.admin;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -7,6 +7,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 import logger.LoggerUtil;
+import model.appointment.AppointmentAvailability;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import service.admin.Admin;
@@ -67,13 +68,13 @@ public class AdminClient {
     try {
       switch (this.id.getCity()) {
         case Montreal:
-          url = new URL("http://localhost:8080/adminservicemtl?wsdl");
+          url = new URL("http://localhost:8080/adminservice?wsdl");
           break;
         case Quebec:
-          url = new URL("http://localhost:8081/adminserviceque?wsdl");
+          url = new URL("http://localhost:8081/adminservice?wsdl");
           break;
         case Sherbrooke:
-          url = new URL("http://localhost:8082/adminserviceshe?wsdl");
+          url = new URL("http://localhost:8082/adminservice?wsdl");
           break;
       }
       AdminImplService adminImplService = new AdminImplService(url);

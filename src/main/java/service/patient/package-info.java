@@ -1,2 +1,2 @@
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://endpoint.me/")
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://endpoint/")
 package service.patient;

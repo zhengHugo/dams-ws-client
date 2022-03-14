@@ -1,4 +1,6 @@
-package model;
+package model.appointment;
+
+import model.City;
 
 public class AppointmentId implements Comparable<AppointmentId> {
   private final City city;
